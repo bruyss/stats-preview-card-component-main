@@ -35,7 +35,7 @@ body {
 }
 
 img {
-  display: block;
+  display: flex;
   max-width: 100%;
 }
 
@@ -60,8 +60,14 @@ h2 {
   background-color: var(--clr-primary-244);
   border-radius: 0.5em;
   overflow: hidden;
-  margin: 2em 1em;
-  max-width: 70em;
+  margin: 4em auto;
+  max-width: 80em;
+}
+
+@media (max-width: 88rem) {
+  .card {
+    margin: 4rem;
+  }
 }
 
 .split {
@@ -75,14 +81,15 @@ h2 {
   }
 
   .split > * {
-    flex: 1 1 50%;
+    flex-basis: 100%;
   }
 }
 
 .container-text {
   display: flex;
   flex-direction: column;
-  margin: 5%;
+  gap: 2em;
+  margin: 2em;
   text-align: center;
   align-content: center;
   justify-content: center;
@@ -91,9 +98,8 @@ h2 {
 @media (min-width: 550px) {
   .container-text {
     text-align: left;
-    margin: 2em 3em;
-    gap: 4em;
-    max-width: 50%;
+    margin: 2em 4em;
+    gap: 3em;
   }
 }
 
