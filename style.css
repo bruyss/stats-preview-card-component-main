@@ -1,0 +1,122 @@
+:root {
+  --clr-primary-233: hsl(233, 47%, 7%);
+  --clr-primary-244: hsl(244, 38%, 16%);
+  --clr-primary-277: hsl(277, 64%, 61%);
+
+  --clr-neutral-0: hsl(0, 0%, 100%);
+  --clr-neutral-0-t75: hsl(0, 0%, 100%, 0.75);
+  --clr-neutral-0-t6: hsl(0, 0%, 100%, 0.6);
+
+  --ff-primary: "Lexend Deca", serif;
+  --ff-accent: "Inter", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  font-size: 0.9375rem;
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  color: var(--clr-neutral-0);
+  background-color: var(--clr-primary-233);
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1 {
+  margin-bottom: 0.6em;
+}
+
+h2 {
+  margin-bottom: 0.2em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+h1,
+h2 {
+  font-family: var(--ff-accent);
+}
+
+.card {
+  background-color: var(--clr-primary-244);
+  border-radius: 0.5em;
+  overflow: hidden;
+  margin: 2em 1em;
+  max-width: 70em;
+}
+
+.split {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 550px) {
+  .split {
+    flex-direction: row;
+  }
+
+  .split > * {
+    flex: 1 1 50%;
+  }
+}
+
+.container-text {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
+@media (min-width: 550px) {
+  .container-text {
+    text-align: left;
+    margin: 2em 3em;
+    gap: 4em;
+    max-width: 50%;
+  }
+}
+
+.container-img {
+  background-color: var(--clr-primary-277);
+}
+
+.text-highlight {
+  color: var(--clr-primary-277);
+}
+
+.text-whitetrans {
+  color: var(--clr-neutral-0-t75);
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.img-hue {
+  mix-blend-mode: multiply;
+}
+
+.bottom-spacer {
+  margin-bottom: 5em;
+}
